@@ -25,8 +25,8 @@ namespace CommunityAssistMVC.Controllers
 
         {
             Message msg = new Message();
-            int result = db.usp_Register(r.LastName, r.FirstName, r.Email,r.Phone, r.PlainPassword,r.Apartment,
-                r.Street,r.City,r.State,r.Zipcode);
+            int result = db.usp_Register(r.LastName, r.FirstName, r.Email, r.PlainPassword,r.Apartment,
+                r.Street,r.City,r.State,r.Zipcode, r.Phone);
             if (result != -1)
             {
                 msg.MessageText = "Welcome! Congrats on Registering, " + r.FirstName + " " + r.LastName;
